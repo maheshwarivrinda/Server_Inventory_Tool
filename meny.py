@@ -69,8 +69,7 @@ def check_one_menu(servers):
     lagring.save_servers(servers)
     print(f"{name} is {status}.")
 
-def run_menu():
-    servers = lagring.load_servers()
+def run_menu(servers):
 
     while True:
 
@@ -84,7 +83,7 @@ def run_menu():
         print("7. export report as CSV")
         print("8. Exit")
 
-        choice = input("Select an option (1-4): ").strip()
+        choice = input("Select an option (1-8): ").strip()
 
         if choice == "1":
             print_servers(servers)
@@ -108,9 +107,5 @@ def run_menu():
             break
         else:
             print("Invalid selection. Please choose a number from 1 to 8.")
-
-
-if __name__ == "__main__":
-    run_menu()
 
 

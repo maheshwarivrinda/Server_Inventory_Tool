@@ -13,7 +13,7 @@
     "miljo": "prod",
     "roll": "databas",
     "status": "up",
-    "senast_kontrollerad": "2026-11-18 12:32"
+    "senast_kontrollerad": "2026-11-18 12:34"
   },
   {
     "namn": "test01",
@@ -21,7 +21,7 @@
     "miljo": "test",
     "roll": "testserver",
     "status": "down",
-    "senast_kontrollerad": "2026-11-18 12:32"
+    "senast_kontrollerad": "2026-11-18 12:43"
   },
   {
     "namn": "dev01",
@@ -30,5 +30,13 @@
     "roll": "utvecklingsserver",
     "status": "up",
     "senast_kontrollerad": "2026-11-18 12:32"
+  },
+  {
+    "namn": "prov01",
+    "adress": "132.0.2.2",
+    "miljo": "dev",
+    "roll": "testserver",
+    "status": "unknown",
+    "senast_kontrollerad": ""
   }
 ]
