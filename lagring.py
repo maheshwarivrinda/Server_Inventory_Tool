@@ -34,5 +34,4 @@ def export_csv(servers, output_file="report.csv"):
         writer = csv.DictWriter(file, fieldnames=CSV_files)
         writer.writeheader()
         writer.writerows(servers)
-
-     return filepath
+    return filepath
