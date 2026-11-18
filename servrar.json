@@ -4,31 +4,31 @@
     "adress": "example.com",
     "miljo": "prod",
     "roll": "webbserver",
-    "status": "online",
-    "senast_kontrollerad": "2026-11-18 00:38:07"
+    "status": "up",
+    "senast_kontrollerad": "2026-11-18 12:32"
   },
   {
     "namn": "db01",
     "adress": "127.0.0.1",
     "miljo": "prod",
     "roll": "databas",
-    "status": "online",
-    "senast_kontrollerad": "2026-11-18 00:38:07"
+    "status": "up",
+    "senast_kontrollerad": "2026-11-18 12:32"
   },
   {
     "namn": "test01",
     "adress": "192.0.2.10",
     "miljo": "test",
     "roll": "testserver",
-    "status": "offline",
-    "senast_kontrollerad": "2026-11-18 00:38:07"
+    "status": "down",
+    "senast_kontrollerad": "2026-11-18 12:32"
   },
   {
     "namn": "dev01",
     "adress": "localhost",
     "miljo": "dev",
     "roll": "utvecklingsserver",
-    "status": "online",
-    "senast_kontrollerad": "2026-11-18 00:38:07"
+    "status": "up",
+    "senast_kontrollerad": "2026-11-18 12:32"
   }
 ]

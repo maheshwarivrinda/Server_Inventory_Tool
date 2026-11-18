@@ -9,14 +9,14 @@ def print_servers(servers):
 
     print(
         f"{'NAME':<15}{'ADDRESS':<20}{'ENV':<8}"
-        f"{'ROLE':<12}{'STATUS':<10}{'LAST CHECKED':<18}"
+        f"{'ROLE':<20}{'STATUS':<10}{'LAST CHECKED':<18}"
 
     )
-    print("-" * 83)
+    print("-" * 91)
     for s in servers:
         print(
             f"{s['namn']:<15}{s['adress']:<20}{s['miljo']:<8}"
-            f"{s['roll']:<12}{s['status']:<10}{s['senast_kontrollerad']:<18}"
+            f"{s['roll']:<20}{s['status']:<10}{s['senast_kontrollerad']:<18}"
         )
 
 def ask_environment():

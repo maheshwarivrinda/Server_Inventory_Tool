@@ -10,7 +10,7 @@ CSV_FIELDS = ["namn", "adress", "miljo", "roll", "status", "senast_kontrollerad"
 def get_data_file():
     return os.environ.get("INVENTORY_DATAFIL", "servrar.json")
 
-def load_servers(filename= DEFAULT_DATA_FILE):
+def load_servers(filename=None):
     filepath = Path(filename or get_data_file())
     if not filepath.exists():
         return []
@@ -20,18 +20,19 @@ def load_servers(filename= DEFAULT_DATA_FILE):
 def save_servers(servers, filename=None):
     """Saves the server list back to a JSON file"""
     filepath = Path(filename or get_data_file())
-    with open(filename, "w", encoding="utf-8") as file:
+    with open(filepath, "w", encoding="utf-8") as file:
         json.dump(servers, file, indent=2, ensure_ascii=False)
 
-def export_csv(servers, output_file="report.csv"):
+def export_csv(servers):
     """Export all servers to a timestamped CSV file and return the file path."""
     report_dir = Path(REPORT_DIR)
-    report_dir.mkdir(exist_ok=True)
+    report_dir.mkdir(exist_ok=True)  # create the directory if missing
+
     timestamp = datetime.now().strftime("%Y-%m-%d_%H%M")
     filepath = report_dir / f"inventering_{timestamp}.csv"
 
-    with open(output_file, "w", newline="", encoding="utf-8") as file:
-        writer = csv.DictWriter(file, fieldnames=CSV_files)
+    with open(filepath, "w", newline="", encoding="utf-8") as file:
+        writer = csv.DictWriter(file, fieldnames=CSV_FIELDS)
         writer.writeheader()
         writer.writerows(servers)
     return filepath

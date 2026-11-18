@@ -18,14 +18,14 @@ def update_server_status(server):
          server["status"] = "up"
     else:
         server["status"] = "down"
-     server["senast_kontrollerad"] = datetime.now().strftime("%Y-%m-%d %H:%M")
-     return server["status"]
+    server["senast_kontrollerad"] = datetime.now().strftime("%Y-%m-%d %H:%M")
+    return server["status"]
 
 
 def check_all_servers(servers):
      down_count = 0
      for server in servers:
-         print(f"Checking {server['namn']} ({address})...")
+         print(f"Checking {server['namn']} ({server['adress']})...")
          if update_server_status(server) == "down":
              down_count += 1
 
